@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vproapp-nodeport-service
+spec:
+  ports:
+  - port: 8090
+    nodePort: 30001
+    targetPort: vproapp-port #port of the pod 
+    #targetPort: 8090
+    protocol: tcp
+  selector:
+    app: vpro
+  type : NodePort
