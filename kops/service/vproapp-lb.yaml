@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: vproapp-nodeport-service
+  name: vproapp-lb-service
 spec:
   ports:
   - port: 80 # LoadBalancer IP Port to access
