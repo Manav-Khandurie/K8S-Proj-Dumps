@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-loadbalancer-service
+spec:
+  selector:
+    app: my-app                # Matches the label of your Pod
+  ports:
+    - port: 80                 # Port exposed by the LoadBalancer
+      targetPort: 80           # Port on the container (nginx)
+      protocol: TCP
+  type: LoadBalancer
