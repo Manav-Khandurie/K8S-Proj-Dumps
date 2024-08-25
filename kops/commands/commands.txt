@@ -4,6 +4,6 @@ kops update cluster --name kube.proddeploy.xyz --state=s3://kopsstatebucketmanav
 
 kops validate cluster --state=s3://kopsstatebucketmanav
 
-kops delete cluster --name kube.proddeploy.xyz --state=s3://kopsstatebucketmanav --yes --admin
+kops get cluster --state=s3://kopsstatebucketmanav
 
 kops delete cluster --name kube.proddeploy.xyz --state=s3://kopsstatebucketmanav --yes  
