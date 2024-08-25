@@ -12,5 +12,4 @@ spec:
       image: imranvisualpath/freshtomapp:V7
       ports: 
         - name: vproapp-port
-          conatinerPort: 80
-        
+          containerPort: 80  # Corrected here        
