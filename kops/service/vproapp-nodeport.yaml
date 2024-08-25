@@ -9,7 +9,7 @@ spec:
     nodePort: 30001
     targetPort: vproapp-port #port of the pod 
     #targetPort: 8090
-    protocol: tcp
+    protocol: TCP
   selector:
     app: vpro
   type : NodePort
