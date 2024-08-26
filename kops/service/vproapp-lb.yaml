@@ -8,7 +8,7 @@ spec:
   - port: 80 # LoadBalancer IP Port to access
     # nodePort: 30001 #No need to assign as its gets assigned randomly
     # targetPort: vproapp-port #port of the pod 
-    targetPort: 8090
+    targetPort: 8080
     protocol: TCP
   selector:
     app: vpro
