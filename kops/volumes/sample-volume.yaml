@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dbpod
+spec:
+  os: { name: linux }
+  nodeSelector:
+    kubernetes.io/os: linux
+  containers:
+  - name: example-container
+    image: mysql:5.7
+    volumeMounts:
+    - mountPath: /var/lib/mysql
+      name: example-volume
+  volumes:
+  - name: example-volume
+    hostPath:
+      path: /data # directory location on host
+      type: DirectoryOrCreate # this field is optional
